@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Drawing</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="430" height="330" xmlns="http://www.w3.org/2000/svg">
+        
+        <!-- Rectangle -->
+        <rect width="400" height="300" x="15" y="15"
+        style="fill:#0a070a;stroke:rgb(5, 0, 25);stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+
+        <!-- Image -->
+        <image href="Morning.jpg" x="15" y="15" width="600" height="300"/>
+
+        <!-- Text -->
+        <text x="30" y="110" fill="black" font-size="24" font-family="Arial" font-weight="bold">Good Morning!!</text>
+        <text x="30" y="160" fill="black" font-size="24" font-family="Arial" font-weight="bold">Wishing You a</text>
+        <text x="30" y="200" fill="black" font-size="24" font-family="Arial" font-weight="bold">Beautiful Day</text>
+        <text x="80" y="240" fill="black" font-size="36">&#x1F60A;</text>
+        
+    </svg>
+</body> 
+</html>

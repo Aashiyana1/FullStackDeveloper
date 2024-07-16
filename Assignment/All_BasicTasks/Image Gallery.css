@@ -1,0 +1,24 @@
+/*------Image Gallery------*/
+body{
+    background: linear-gradient(to right, #db389500, hsl(329, 91%, 64%));
+}
+body h2{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.image-gallery {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 5px;
+    background-color: black;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.image-gallery img {
+    width: 25%;
+    height: 250px;
+    margin: 10px;
+}
+

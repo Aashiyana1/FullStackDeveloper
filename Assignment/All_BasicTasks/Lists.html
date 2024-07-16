@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Lists</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: rgb(177, 8, 87);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            justify-content: space-around; /* Space between the two lists */
+            align-items: center;
+            height: 100vh;
+        }
+        .styled-list, .unordered-list {
+            width: 45%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .styled-list ul {
+            list-style: none; /* Remove default list styling */
+        }
+        .styled-list ul li {
+            display: flex;
+            background: white;
+            padding: 10px 20px;
+            color: black;
+            margin: 5px 0;
+            transition: .5s;
+        }
+        .styled-list ul li:nth-child(1) {
+            background: hsl(241, 100%, 50%);
+        }
+        .styled-list ul li:nth-child(2) {
+            background: hsl(241, 100%, 50%);
+        }
+        .styled-list ul li:nth-child(3) {
+            background: hsl(241, 100%, 50%);
+        }
+        .styled-list ul li span:nth-child(1) {
+           width: 30px; 
+           text-align: right;
+        }
+        .styled-list ul li span:nth-child(2) {
+           width: 200px; 
+           text-align: right;
+        }
+        .styled-list ul li span:nth-child(3) {
+           width: 100px; 
+           text-align: right;
+        }
+        .styled-list .badge {
+            margin-left: auto; /* Move badge to the rightmost part of the list item */
+            color: gold; /* Optional: Add color to the trophy icon */
+        }
+        .unordered-list ul {
+            list-style: disc; /* Use bullets for unordered list */
+            padding-left: 20px;
+        }
+        .unordered-list ul li {
+            background: white;
+            padding: 10px 20px;
+            color: black;
+            margin: 5px 0;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="styled-list">
+        <ul>
+            <li>
+                <span class="number">1</span>
+                <span class="name">Amit</span>
+                <span class="points">95</span>
+                <span class="badge"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+            </li>
+            <li>
+                <span class="number">2</span>
+                <span class="name">Janhvi</span>
+                <span class="points">80</span>
+                <span class="badge"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+            </li>
+            <li>
+                <span class="number">3</span>
+                <span class="name">Sachin</span>
+                <span class="points">75</span>
+                <span class="badge"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+            </li>
+            <li>
+                <span class="number">4</span>
+                <span class="name">Sana</span>
+                <span class="points">60</span>
+                <span class="badge"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+            </li>
+        </ul>
+    </div>
+    <div class="unordered-list">
+        <ul>
+            <li>Mogra</li>
+            <li>Rose</li>
+            <li>SunFlower</li>
+            <li>Lily</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body{
+    background-color: beige;
+}
+
+body h1{
+    text-align: center;
+}
+
+
+.masking-image {
+    width: 500px;
+    height: 300px;
+    margin-top: 10%;
+    margin-left: 35%;
+
+    background-image: url('purpleflower.jpg');
+    background-size:  cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+ }

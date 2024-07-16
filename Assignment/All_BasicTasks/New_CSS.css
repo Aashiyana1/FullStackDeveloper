@@ -1,0 +1,101 @@
+
+body{
+    background-color: bisque;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  } 
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid hsl(0, 93%, 44%);
+  }
+  tr:nth-child(even) {
+    background-color: hsl(251, 88%, 44%);
+  }
+  tr:hover {
+    background-color: hwb(0 2% 13%);
+  } 
+  table, th, td {
+    border: 1px solid hwb(87 4% 4%);
+  } 
+  .table-wrapper {
+    overflow-x: auto;
+    width: 100%; 
+  } 
+  th {
+    background-color: rgb(228, 17, 115); 
+    color: white; 
+    padding: 12px; 
+    text-align: center;
+  }
+  /* Text Shadow*/
+  .Text h1 {
+    text-shadow: 2px 2px 2px #e62cea80; 
+    opacity: 0.8;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .Text1 h2 {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
+    color: #3c5623;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .Text2 h3 {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+  }
+  
+/*---------------- Float --------------*/
+* {
+    box-sizing: border-box;
+  }
+
+.container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .left, .right {
+    max-width: 600px; 
+    padding: 20px;
+    text-align: justify;
+    
+  }
+  
+  .left h2, .right h2 {
+    color: #1d11cf; 
+  }
+  
+  .left p, .right p {
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+  }
+  
+  .left img, .right img {
+    width: 80px;
+    height: 50px;
+    margin-left: 30px;
+    float: left; 
+    margin-right: 20px; 
+    margin-bottom: 10px;
+  }
+/* Link styles */
+.container a {
+    color: hsl(239, 89%, 41%); 
+    transition: color 0.3s ease; 
+}
+  
+/* Hover effect for links */
+.container a:hover {
+    color: hwb(0 8% 0%); 
+
+}
+  

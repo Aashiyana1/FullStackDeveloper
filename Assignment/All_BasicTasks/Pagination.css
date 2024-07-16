@@ -1,0 +1,37 @@
+body{
+    background-color: black;
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center align pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+
+}
+
+/* Pagination link styles */
+.page-link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 4px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.page-link:hover {
+    background-color: hsl(0, 96%, 47%);
+    color: #fff;
+}

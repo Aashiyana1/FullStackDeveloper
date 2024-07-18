@@ -1,0 +1,13 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url("orangeflower.jpg"); 
+    background-size: cover;
+ }
+
+ /* For width 400px and larger: */
+ @media only screen and (min-width: 700px) {
+    body { 
+       background-image: url("pinkflower.jpg"); 
+       background-size: cover;
+    }
+ }

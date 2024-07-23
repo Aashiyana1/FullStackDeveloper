@@ -1,0 +1,172 @@
+@font-face {
+    font-family: sub;
+    src: url("../fonts/AlexBrush-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.certificate {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+    border: 5px solid #ccc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+.top-left-decoration1{
+    width: 100mm;
+    height: 11mm;
+    background-color: #0044cc;
+    position: absolute;
+    left: -40mm;
+    transform: rotate(-48deg);
+    z-index: auto;
+}
+.top-left-decoration{
+    width: 80mm;
+    height: 12mm;
+    background-color: #0044cc;
+    position: absolute;
+    left: -40mm;
+    transform: rotate(-48deg);
+    z-index: auto;
+}
+
+.top-right-decoration{
+    width: 80mm;
+    height: 12mm;
+    background-color: #0044cc;
+    position: absolute;
+    right: 40mm;
+    transform: rotate(-34deg);
+    z-index: auto;
+}
+
+.bottom-left-decoration{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #0044cc, #007bff);
+    clip-path: polygon(0 0, 90% 0, 0 90%);
+}
+.bottom-right-decoration {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to right, #0044cc, #007bff);
+    clip-path: polygon(0 0, 90% 0, 0 90%);
+}
+
+.top-left-decoration {
+    top: 61px;
+    left: -86px;
+}
+
+.top-right-decoration {
+    top: 0;
+    right: -83px;
+    transform: rotate(49deg);
+}
+
+.bottom-left-decoration {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.bottom-right-decoration {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.certificate-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 30mm;
+}
+
+.certificate-content .title {
+    position: relative;
+    font-size: 52pt;
+}
+
+.certificate-content .date {
+    position: relative;
+    bottom: -49mm;
+}
+
+.certificate-content .subtitle {
+    position: relative;
+    top: -6mm;
+    font-size: 22pt;
+}
+
+.certificate-content .initial-content {
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: 3pt;
+}
+
+.certificate-content .candidate-name {
+    position: relative;
+    left: -1mm;
+    font-family: sub;
+    color: rgb(218 165 32);
+    font-size: 34pt;
+}
+
+.certificate-content .main-content {
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: 1pt;
+    color: rgba(0, 0, 0, 0.809);
+}
+
+.certificate-content .sign-president {
+    position: relative;
+    top: 18mm;
+    left: -48mm;
+}
+
+.certificate-content img.sign-president {
+    width: 39mm;
+}
+
+.certificate-content .sign-director {
+    position: relative;
+    right: -34mm;
+    top: -8mm;
+}
+
+
+.certificate-content img.sign-director {
+    position: relative;
+    width: 29mm;
+    right: -32mm;
+}
+
+.certificate-content .logo>img {
+    position: relative;
+    right: -81mm;
+    width: 50mm;
+    top: -380pt;
+}

@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  @font-face {
+      font-family: sub;
+      src: url("../fonts/AlexBrush-Regular.ttf");
+  }
+  .container{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .certificate-wrapper{
+      width: 800px;
+      height: 600px;
+      background-color: hwb(0 100% 0% / 0.957);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .container_white{
+      width: 100%;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 50px solid hsl(350, 87%, 79%);
+  }
+  .container_pink{
+      width: 90%;
+      height: 85%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      border: 15px solid hsl(350, 87%, 79%);
+  }
+  .heading{
+      font-size: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: hsl(350, 87%, 79%);
+  }
+  .text{
+      font-size: 20px;
+      color: black;
+  }
+  .name{
+      font-size: 25px;
+      color: black;
+      width: 80%;
+      font-weight: 600;
+      border-bottom: 2px solid hsl(350, 87%, 79%);
+      font-family: "Sofia", sans-serif;
+  }
+  .description{
+      width: 80%;
+      margin-top: 10px;
+  }
+  .top,.center{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+  }
+  .bottom{
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+  }
+  .date_text{
+      border-bottom: 2px solid hsl(350, 87%, 79%);
+      color: hsl(350, 87%, 79%);
+      font-weight: 500;
+  }

@@ -21,6 +21,33 @@ document.write("<br> getTime():" +date.getTime());
 
 
 
+date.setFullYear(2025); 
+date.setMonth(11); 
+date.setDate(25); 
+date.setHours(15); 
+date.setMinutes(30); 
+date.setSeconds(45); 
+
+// Display updated date information
+document.write("<br><br>Updated Date Methods:");
+document.write("<br>Updated toString(): " + date.toString());
+document.write("<br>Updated toDateString(): " + date.toDateString());
+document.write("<br>Updated toTimeString(): " + date.toTimeString());
+document.write("<br>Updated toISOString(): " + date.toISOString());
+document.write("<br>Updated toLocaleString(): " + date.toLocaleString());
+document.write("<br>Updated getFullYear(): " + date.getFullYear());
+document.write("<br>Updated getMonth(): " + date.getMonth());
+document.write("<br>Updated getDate(): " + date.getDate());
+document.write("<br>Updated getDay(): " + date.getDay());
+document.write("<br>Updated getDay(): " + days[date.getDay()]);
+document.write("<br>Updated getHours(): " + date.getHours());
+document.write("<br>Updated getMinutes(): " + date.getMinutes());
+document.write("<br>Updated getSeconds(): " + date.getSeconds());
+document.write("<br>Updated getMilliseconds(): " + date.getMilliseconds());
+document.write("<br>Updated getTime(): " + date.getTime());
+
+
+
 // Date toString() 
 /*console.log("toString():", date.toString());
 

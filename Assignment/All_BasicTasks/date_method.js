@@ -1,8 +1,28 @@
-console.log("***************Date Methods*******************");
+let z = "Date Methods";
 const date = new Date();
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-// Date toString()
-console.log("toString():", date.toString());
+document.getElementById("Heading3").innerHTML=z;
+document.write("toString():"+ date.toString());
+document.write("<br>toDateString():" +date.toDateString());
+document.write("<br> toTimeString():" +date.toTimeString());
+document.write("<br> toISOString():" +date.toISOString());
+document.write("<br> toLocaleString():" +date.toLocaleString());
+document.write("<br> getFullYear():" +date.getFullYear());
+document.write("<br> getMonth():" +date.getMonth());
+document.write("<br> getDate():" +date.getDate());
+document.write("<br> getDay():" +date.getDay());
+document.write("<br> getDay():" +days[date.getDay()]);
+document.write("<br> getHours():" +date.getHours());
+document.write("<br> getMinutes():" +date.getMinutes());
+document.write("<br> getSeconds():" +date.getSeconds());
+document.write("<br> getMilliseconds():" +date.getMilliseconds());
+document.write("<br> getTime():" +date.getTime());
+
+
+
+// Date toString() 
+/*console.log("toString():", date.toString());
 
 // Date toDateString()
 console.log("toDateString():", date.toDateString());
@@ -45,4 +65,4 @@ console.log("getSeconds():", date.getSeconds());
 console.log("getMilliseconds():", date.getMilliseconds());
 
 // Date getTime()
-console.log("getTime():", date.getTime());
+console.log("getTime():", date.getTime());*/

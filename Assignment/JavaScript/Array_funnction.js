@@ -1,0 +1,20 @@
+let P = "Array Methods";
+const numbers = [1, 2, 3, 4, 5];
+const fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+
+document.getElementById("Heading4").innerHTML = P;
+document.write("<br>Original Array: " + numbers);
+document.write("<br>Length of Array: " + numbers.length);
+document.write("<br>Original Array: " + fruits);
+document.write("<br>Length of Array: " + fruits.length);
+document.write("<br>Array to String: " + numbers.toString());
+document.write("<br>Array Join (comma): " + numbers.join(", "));
+document.write("<br>Array Join (dash): " + numbers.join(" - "));
+document.write("<br>Push new item: " + numbers.push(6) + " (New array: " + numbers + ")");
+document.write("<br>Pop last item: " + numbers.pop(5) + " (New array: " + numbers + ")");
+document.write("<br>Shift first item: " + numbers.shift() + " (New array: " + numbers + ")");
+document.write("<br>Unshift new item: " + numbers.unshift(0) + " (New array: " + numbers + ")");
+document.write("<br>Splice at index 2: " + numbers.splice(2, 1, 'inserted') + " (New array: " + numbers + ")");
+document.write("<br>Slice from index 1 to 3: " + numbers.slice(1, 3));
+document.write("<br>Reverse array: " + fruits.reverse());
+document.write("<br>Sorted array: " + fruits.sort());

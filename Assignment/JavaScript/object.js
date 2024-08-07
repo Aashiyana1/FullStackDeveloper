@@ -2,131 +2,182 @@
 document.open();
 document.write("<h1>JavaScript Object Methods and Properties</h1>");
 
-// Object.assign
-let target = {};
-let source1 = { a: 1 };
-let source2 = { b: 2 };
-Object.assign(target, source1, source2);
-document.write("<h2>Object.assign</h2>");
-document.write("<p>Target after Object.assign: a=" + target.a + ", b=" + target.b + "</p>");
+let u1 = {
+    mobile: "+91892345678"
+};
 
-// Object.constructor
-document.write("<h2>Object.constructor</h2>");
-document.write("<p>Constructor of Object: " + Object.prototype.constructor.name + "</p>");
+u1.name = "John Doe";
+u1.gender = "Male";
+u1.dob = new Date("01-01-2025");
 
-// Object.create
+document.write("<p>u1.gender: " + u1.gender + "</p>");
+
+var u2 = new Object();
+u2.name = "Maria Doe";
+u2.gender = "Female";
+u2.dob = new Date("01-01-2029");
+
+document.write("<p>u2.dob: " + u2.dob + "</p>");
+
+function User(name, gender, dob, mobile, email) {
+    this.innerName = name;
+    this.innerGender = gender;
+    this.iDob = dob;
+    this.iMobile = mobile;
+    this.iEmail = email;
+
+    document.write("<p>User created: name=" + this.innerName + ", gender=" + this.innerGender + ", dob=" + this.iDob + ", mobile=" + this.iMobile + ", email=" + this.iEmail + "</p>");
+}
+
+let u3 = new User("Mantissa", "Female", "01-01-1996", "+91976787123", "mantissa@gmail.com");
+
+document.write("<p>u3.mobile: " + u3.iMobile + "</p>");
+
+let fobj = { name: "John Doe" };
+let sObj = { email: "john@gmail.com" };
+
+Object.assign(fobj, sObj);
+
+document.write("<p>fobj after Object.assign: name=" + fobj.name + ", email=" + fobj.email + "</p>");
+
+let p1 = {
+    firstName: "Sonali",
+    lastName: "Bedre",
+    fullName: function(jOp) {
+        return this.firstName + jOp + this.lastName;
+    }
+};
+
+document.write("<p>p1.fullName(\",\"): " + p1.fullName(",") + "</p>");
+
+let p2 = {
+    firstName: "Manisha",
+    lastName: "Koyirala"
+};
+
+fn = p1.fullName.bind(p2);
+document.write("<p>fn(\"$\"): " + fn("$") + "</p>");
+document.write("<p>p1.fullName.call(p2, \"^\"): " + p1.fullName.call(p2, "^") + "</p>");
+document.write("<p>p1.fullName.apply(p2, [\"/\"]): " + p1.fullName.apply(p2, ["/"]) + "</p>");
+
+document.write("<p>Object.entries(p1): " + Object.entries(p1).map(e => e.join(": ")).join(", ") + "</p>");
+document.write("<p>Object.values(p1): " + Object.values(p1).join(", ") + "</p>");
+document.write("<p>Object.keys(p1): " + Object.keys(p1).join(", ") + "</p>");
+
+Object.freeze(p1);
+document.write("<p>p1 after Object.freeze: firstName=" + p1.firstName + ", lastName=" + p1.lastName + "</p>");
+
+p1.email = "abcd@gmail.com";  // This should not change the object as it's frozen
+document.write("<p>p1.email after trying to set it: " + p1.email + "</p>");
+document.write("<p>Object.isFrozen(p1): " + Object.isFrozen(p1) + "</p>");
+
+Object.preventExtensions(p1);
+document.write("<p>p1 after Object.preventExtensions: firstName=" + p1.firstName + ", lastName=" + p1.lastName + "</p>");
+
+document.write("<h2>Additional Object Methods</h2>");
+
 let proto = { greet: "Hello" };
 let obj = Object.create(proto, { name: { value: "John" } });
-document.write("<h2>Object.create</h2>");
+document.write("<h3>Object.create</h3>");
 document.write("<p>Object created with prototype: name=" + obj.name + ", greet=" + obj.greet + "</p>");
 
-// Object.defineProperties
 let person = {};
 Object.defineProperties(person, {
     name: { value: "Jane", writable: true },
     age: { value: 30, writable: false }
 });
-document.write("<h2>Object.defineProperties</h2>");
+document.write("<h3>Object.defineProperties</h3>");
 document.write("<p>Person object: name=" + person.name + ", age=" + person.age + "</p>");
 
-// Object.defineProperty
-let car = {};
-Object.defineProperty(car, 'model', {
-    value: 'Toyota',
-    writable: true,
-    enumerable: true,
-    configurable: true
-});
-document.write("<h2>Object.defineProperty</h2>");
-document.write("<p>Car object with model: model=" + car.model + "</p>");
+let student = {
+    name: 'John Doe',
+    age: 22,
 
-// Object.entries
-let entries = Object.entries(car);
-document.write("<h2>Object.entries</h2>");
-let entriesHtml = entries.map(([key, value]) => key + "=" + value).join(", ");
-document.write("<p>Entries of car object: " + entriesHtml + "</p>");
+// Custom toString method
+toString: function() {
+    return "Student: Name=" + this.name + ", Age=" + this.age;
+},
 
-// Object.freeze
-Object.freeze(person);
-document.write("<h2>Object.freeze</h2>");
-document.write("<p>Is person object frozen? " + Object.isFrozen(person) + "</p>");
+// Custom valueOf method
+valueOf: function() {
+    return "Student Name: " + this.name + ", Age: " + this.age;
+}
+};
+document.write("<h3>Object.defineProperty</h3>");
+document.write("<p>Student object with name: name=" + student.name + "</p>");
 
-// Object.fromEntries
-let entriesArray = [['key1', 'value1'], ['key2', 'value2']];
+let entriesArray = [['subject1', 'Math'], ['subject2', 'Science']];
 let objFromEntries = Object.fromEntries(entriesArray);
-document.write("<h2>Object.fromEntries</h2>");
-let fromEntriesHtml = Object.entries(objFromEntries).map(([key, value]) => key + "=" + value).join(", ");
-document.write("<p>Object created from entries: " + fromEntriesHtml + "</p>");
+document.write("<h3>Object.fromEntries</h3>");
+document.write("<p>Object created from entries: " + Object.entries(objFromEntries).map(e => e.join(": ")).join(", ") + "</p>");
 
-// Object.getOwnPropertyDescriptor
-let descriptor = Object.getOwnPropertyDescriptor(car, 'model');
-document.write("<h2>Object.getOwnPropertyDescriptor</h2>");
-document.write("<p>Descriptor of model property: value=" + descriptor.value +
-    ", writable=" + descriptor.writable +
-    ", enumerable=" + descriptor.enumerable +
-    ", configurable=" + descriptor.configurable + "</p>");
+let descriptor = Object.getOwnPropertyDescriptor(student, 'name');
+document.write("<h3>Object.getOwnPropertyDescriptor</h3>");
+document.write("<p>Descriptor of name property: </p>");
+document.write("<ul>");
+Object.entries(descriptor).forEach(([key, value]) => {
+    document.write("<li>" + key + ": " + value + "</li>");
+});
+document.write("</ul>");
 
-// Object.getOwnPropertyDescriptors
-let descriptors = Object.getOwnPropertyDescriptors(car);
-document.write("<h2>Object.getOwnPropertyDescriptors</h2>");
-let descriptorsHtml = Object.entries(descriptors).map(([key, desc]) =>
-    key + ": value=" + desc.value +
-    ", writable=" + desc.writable +
-    ", enumerable=" + desc.enumerable +
-    ", configurable=" + desc.configurable
-).join("<br>");
-document.write("<p>Descriptors of car object:<br>" + descriptorsHtml + "</p>");
+let descriptors = Object.getOwnPropertyDescriptors(student);
+document.write("<h3>Object.getOwnPropertyDescriptors</h3>");
+document.write("<p>Descriptors of student object: </p>");
+document.write("<ul>");
+Object.entries(descriptors).forEach(([key, desc]) => {
+    document.write("<li><strong>" + key + ":</strong></li>");
+    document.write("<ul>");
+    Object.entries(desc).forEach(([descKey, descValue]) => {
+        document.write("<li>" + descKey + ": " + descValue + "</li>");
+    });
+    document.write("</ul>");
+});
+document.write("</ul>");
 
-// Object.getOwnPropertyNames
-let propertyNames = Object.getOwnPropertyNames(car);
-document.write("<h2>Object.getOwnPropertyNames</h2>");
-document.write("<p>Property names of car object: " + propertyNames.join(", ") + "</p>");
+let propertyNames = Object.getOwnPropertyNames(student);
+document.write("<h3>Object.getOwnPropertyNames</h3>");
+document.write("<p>Property names of student object: </p>");
+document.write("<ul>");
+propertyNames.forEach(name => {
+    document.write("<li>" + name + "</li>");
+});
+document.write("</ul>");
 
-// Object.isExtensible
-let extensible = Object.isExtensible(car);
-document.write("<h2>Object.isExtensible</h2>");
-document.write("<p>Is car object extensible? " + extensible + "</p>");
 
-// Object.isFrozen
-document.write("<h2>Object.isFrozen</h2>");
-document.write("<p>Is person object frozen? " + Object.isFrozen(person) + "</p>");
+let extensible = Object.isExtensible(student);
+document.write("<h3>Object.isExtensible</h3>");
+document.write("<p>Is student object extensible? " + extensible + "</p>");
 
-// Object.isSealed
-let sealed = Object.isSealed(person);
-document.write("<h2>Object.isSealed</h2>");
-document.write("<p>Is person object sealed? " + sealed + "</p>");
+let person2 = {};
+Object.defineProperties(person2, {
+    name: { value: "Jane", writable: true },
+    age: { value: 30, writable: false }
+});
 
-// Object.keys
-let keys = Object.keys(car);
-document.write("<h2>Object.keys</h2>");
-document.write("<p>Keys of car object: " + keys.join(", ") + "</p>");
+let sealed = Object.isSealed(person2);
+document.write("<h3>Object.isSealed</h3>");
+document.write("<p>Is person2 object sealed? " + sealed + "</p>");
 
-// Object.preventExtensions
-Object.preventExtensions(car);
-document.write("<h2>Object.preventExtensions</h2>");
-document.write("<p>Is car object extensible after preventExtensions? " + Object.isExtensible(car) + "</p>");
+Object.preventExtensions(student);
+document.write("<h3>Object.preventExtensions</h3>");
+document.write("<p>Is student object extensible after preventExtensions? " + Object.isExtensible(student) + "</p>");
 
-// Object.prototype
 Object.prototype.sayHello = function() { return "Hello!"; };
-document.write("<h2>Object.prototype</h2>");
+document.write("<h3>Object.prototype</h3>");
 document.write("<p>Prototype method sayHello: " + ({}).sayHello() + "</p>");
 
-// Object.seal
-Object.seal(person);
-document.write("<h2>Object.seal</h2>");
-document.write("<p>Is person object sealed after seal? " + Object.isSealed(person) + "</p>");
+Object.seal(person2);
+document.write("<h3>Object.seal</h3>");
+document.write("<p>Is person2 object sealed after seal? " + Object.isSealed(person2) + "</p>");
 
-// Object.toString
-document.write("<h2>Object.toString</h2>");
-document.write("<p>String representation of car object: " + car.toString() + "</p>");
+document.write("<h3>Object.toString</h3>");
+document.write("<p>String representation of student object: " + student.toString() + "</p>");
 
-// Object.valueOf
-document.write("<h2>Object.valueOf</h2>");
-document.write("<p>Primitive value of car object: " + car.valueOf() + "</p>");
+document.write("<h3>Object.valueOf</h3>");
+document.write("<p>Primitive value of student object: " + student.valueOf() + "</p>");
 
-// Object.values
-let values = Object.values(car);
-document.write("<h2>Object.values</h2>");
-document.write("<p>Values of car object: " + values.join(", ") + "</p>");
+let values = Object.values(student);
+document.write("<h3>Object.values</h3>");
+document.write("<p>Values of student object: " + values.join(", ") + "</p>");
 
 document.close();

@@ -1,4 +1,4 @@
-        a = 10;
+        /*a = 10;
         b = 20;
         c = (function addition() {
             var a = "ABC";
@@ -23,4 +23,4 @@
 
         // Display result of Closure
         document.write("<h2>Closure Result</h2>");
-        document.write("<p>" + innerFunction() + "</p>");
+        document.write("<p>" + innerFunction() + "</p>");*/

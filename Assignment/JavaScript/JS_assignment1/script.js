@@ -1,7 +1,7 @@
 // Function to change the text of the <h1> tag
 function changeHeading() {
     const heading = document.getElementById('heading');
-    heading.textContent = 'Heading Updated!';
+    heading.textContent = 'Happy Learning!!';
 }
 
 // Add event listener to the button

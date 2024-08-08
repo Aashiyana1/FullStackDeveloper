@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Modules Example</title>
+</head>
+<body>
+    <h1>***Module***</h1>
+    <div id="results"></div>
+
+    <script type="module">
+        // Importing functions and constants from module.js
+        import { add, subtract, PI } from './module.js';
+
+        // Using the imported functions
+        const additionResult = add(10, 5);
+        const subtractionResult = subtract(10, 5);
+
+        // Get the element where results will be displayed
+        const resultsDiv = document.getElementById('results');
+
+        // Displaying the results using innerHTML
+        resultsDiv.innerHTML = `
+            <p>Addition Result: ${additionResult}</p>
+            <p>Subtraction Result: ${subtractionResult}</p>
+            <p>Value of PI: ${PI}</p>
+        `;
+    </script>
+
+</body>
+</html>

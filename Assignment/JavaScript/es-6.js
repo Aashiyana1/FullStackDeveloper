@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p><strong>Arrow Functions:</strong> Add: ${add(10, 5)}, Subtract: ${subtract(10, 5)}, Greet: ${greet()}</p>
         <p><strong>Template Literals:</strong> ${greeting}</p>
         <p><strong>Destructuring Assignment:</strong> x: ${x}, y: ${y}, Name: ${personName}, Age: ${age}</p>
-        <p><strong>Default Parameters:</strong> ${greetUser()} ${greetUser('Alice')}</p>
+        <p><strong>Default Parameters:</strong> ${greetUser()} ${greetUser('Aashiyana')}</p>
         <p><strong>Rest and Spread Operators:</strong> Sum: ${sum(1, 2, 3, 4)}, More Numbers: ${moreNumbers.join(', ')}</p>
         <p><strong>Classes:</strong> ${Aashiyana.greet()}</p>
     `;

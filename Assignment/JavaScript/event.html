@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<style>
+    /* Internal CSS */
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: hsl(211, 88%, 14%);
+        color: white;
+        transition: background-color 0.3s, transform 0.3s;
+        margin: 10px;
+      }
+      
+      button:hover {
+        background-color: hsl(211, 11%, 48%);
+        transform: scale(1.1);
+      }
+      
+      input, select {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      
+      div {
+        margin: 10px;
+        font-size: 16px;
+        color: #333;
+      }
+  </style>
+<body>
+    <button id="colorButton">Change Background Color</button>
+    <input id="textBox" type="text" placeholder="Type something..." />
+    <select id="selectBox">
+        <option value="">Select an option</option>
+        <option value="coffee">Coffee</option>
+        <option value="tea">Tea</option>
+        <option value="juice">Juice</option>
+        <option value="water">Water</option>
+    </select>
+    <div id="output"></div>
+
+    <script src="event.js"></script>
+</body>
+</html>

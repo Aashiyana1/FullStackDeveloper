@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Managemnt Software</title>
+    <!--<script>
+        function buttonClick(inputStr){
+            alert(inputStr);
+        }
+    </script>-->
+</head>
+<body >
+    <h1>Hello World !!!</h1>
+    <p id="firstPara"></p>
+
+    <input type="text" id="username" title="Username" name="username"
+    onkeydown="keydownEventHandler(event)" />
+    <button onclick="clickEventHandler(event)" onmouseout="mouseOutHandler()">Click Me</button>
+
+
+    <a href="https://google.com">Google</a>
+
+    <form name="registrationForm" id="registrationForm" novalidate onsubmit="submitEventHandler(event)">
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" required  minlength="5">
+            <p id="firstNameError" style="display:none">Firstname should be greater than 5 characters</p>
+        </div>
+        <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+        </div>
+        <button type="submit"> Save Details </button>
+    </form>
+
+    
+    <script src="events-test.js"></script>
+    <script src="form-test.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "customer-management-backend",
+  "version": "1.0.0",
+  "description": "Customer management software backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs"
+  },
+  "keywords": [
+    "Customer",
+    "Management",
+    "BE"
+  ],
+  "author": "aashiyana pathan",
+  "license": "ISC",
+  "dependencies": {
+    "aashiyana-math-package": "^1.0.1",
+    "express": "^4.19.2"
+  }
+}

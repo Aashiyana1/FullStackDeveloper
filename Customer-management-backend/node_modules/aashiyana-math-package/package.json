@@ -1,0 +1,18 @@
+{
+  "name": "aashiyana-math-package",
+  "version": "1.0.1",
+  "description": "This is a math library",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs"
+  },
+  "keywords": [
+    "Add",
+    "Sub",
+    "Div",
+    "Mul"
+  ],
+  "author": "Aashiyana Pathan",
+  "license": "ISC"
+}
